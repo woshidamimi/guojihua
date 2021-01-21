@@ -86,7 +86,7 @@ function activate(context) {
 		for(let key in obj) {
 			let value = obj[key];
 			let temp = value.split('@')[1] || value;
-			objStr = `${objStr}'${key}':${temp},`
+			objStr = `${objStr}'${key}':'${temp},`
 			let reg  = new RegExp(value)
 			
 			 temp = text.replace(reg, `'${key}'`);
