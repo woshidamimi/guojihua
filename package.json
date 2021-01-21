@@ -1,0 +1,64 @@
+{
+	"name": "guojihua",
+	"displayName": "guojihua",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:getfn.helloWorld",
+		"onLanguage:javascript",
+		"onLanguage:typescript",
+		"onLanguage:vue",
+		"onLanguage:scss",
+		"onLanguage:css",
+		"onLanguage:markdown",
+		"onLanguage:json",
+		"onLanguage:FreeMarker",
+		"onLanguage:html"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "getfn.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "guojihua",
+				"title": "对文件国际化并且生成国际化文件"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "guojihua",
+				"key": "ctrl+alt+g"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"clipboardy": "^2.3.0"
+	},
+	"publisher": "damimi",
+	"__metadata": {}
+}
